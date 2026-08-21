@@ -419,32 +419,6 @@ The webhook accepts `POST`, not `GET`. Use `curl`, PowerShell, Postman, or anoth
 - Use HTTPS and restrict the destination endpoint.
 - Avoid sending sensitive customer data to an external LLM unless your data-handling requirements permit it.
 
-## GitHub Publishing
-
-Review the repository before publishing:
-
-```powershell
-git status
-git diff -- . ':!.env'
-```
-
-Confirm that `.env` is ignored:
-
-```powershell
-git check-ignore .env
-```
-
-Then commit the project:
-
-```powershell
-git add .
-git commit -m "Add n8n Groq support automation workflow"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/n8n-llm-automation.git
-git push -u origin main
-```
-
-Do not commit until you have checked that no API key appears in staged files.
 
 ## Workflow Screenshot
 
