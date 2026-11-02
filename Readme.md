@@ -187,7 +187,7 @@ Specify Body: Using JSON
 The currently working model ID is:
 
 ```text
-openai/gpt-oss-safeguard-20b
+openai/gpt-oss-120b
 ```
 
 Model availability can change. If Groq reports that the model does not exist, list the models available to your key:
@@ -203,7 +203,7 @@ The JSON body should produce a string for the user message. In n8n, use the JSON
 
 ```javascript
 ={{ JSON.stringify({
-	model: "openai/gpt-oss-safeguard-20b",
+	model: "openai/gpt-oss-120b",
 	temperature: 0.1,
 	response_format: {
 		type: "json_object"

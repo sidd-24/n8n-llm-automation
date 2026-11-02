@@ -33,7 +33,7 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\"model\":\"llama-3.3-70b-versatile\",\"temperature\":0.1,\"response_format\":{\"type\":\"json_object\"},\"messages\":[{\"role\":\"system\",\"content\":\"You classify support messages. Return only valid JSON with these fields: category, priority, summary, sentiment, recommended_action. category must be one of billing, technical, account, shipping, other. priority must be one of low, medium, high, urgent. sentiment must be one of positive, neutral, negative.\"},{\"role\":\"user\",\"content\":{{JSON.stringify($json.body || $json)}}}]}"
+        "jsonBody": "={\"model\":\"openai/gpt-oss-120b\",\"temperature\":0.1,\"response_format\":{\"type\":\"json_object\"},\"messages\":[{\"role\":\"system\",\"content\":\"You classify support messages. Return only valid JSON with these fields: category, priority, summary, sentiment, recommended_action. category must be one of billing, technical, account, shipping, other. priority must be one of low, medium, high, urgent. sentiment must be one of positive, neutral, negative.\"},{\"role\":\"user\",\"content\":{{JSON.stringify($json.body || $json)}}}]}"
       },
       "id": "groq",
       "name": "Classify With Groq",
